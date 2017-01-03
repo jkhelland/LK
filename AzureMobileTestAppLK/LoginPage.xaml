@@ -2,21 +2,23 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
             x:Class="AzureMobileTestAppLK.LoginPage"
-            Title="LK Login">
-  <StackLayout Spacing="20" Padding="20" VerticalOptions="Center">
-    <Image Source="@drawable\icon.png"/>
-    <Image Source="@drawable\LKTxT.png"/>
-    <Entry Placeholder="Username"
+            Title="Logg inn"
+            BackgroundColor="White">
+  <StackLayout Spacing="20" Padding="20" VerticalOptions="Center" BackgroundColor="White">
+    <Image Source="icon.png" Aspect="AspectFit"
+           WidthRequest = "75" HeightRequest = "75" />
+    <Image Source="LKTxT.png" Aspect="AspectFit" />
+    <Entry Placeholder="E-post"
             Text="{Binding Username}"/>
-    <Entry Placeholder="Password"
+    <Entry Placeholder="Passord"
             Text="{Binding Password}"
             IsPassword="true"/>
-    <Button Text="Login" TextColor="White"
+    <Button Text="Logg på" TextColor="White"
             BackgroundColor="#E32021"
-            Command="{Binding LoginCommand}"/>
-    <Button Text="Register" TextColor="White"
-            BackgroundColor="#0E26BF"
-            Command="{Binding RegisterCommand}"/>
-    
+            Clicked="OnLoginClicked" />
+    <Button Text="Opprett ny bruker" TextColor="#007DFF"
+            BackgroundColor="White" 
+            Clicked="OnRegisterClicked"/>
+    <Label x:Name="valueLabel" Text="{Binding LoginText}" />
   </StackLayout>
 </ContentPage>

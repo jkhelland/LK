@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AzureMobileTestAppLK.NewUser"
+             Title="Opprett ny bruker"
+             BackgroundColor="White">
+  <Label Text="{Binding MainText}" VerticalOptions="Center" HorizontalOptions="Center" />
+  <StackLayout Spacing="20" Padding="20" VerticalOptions="Center" BackgroundColor="White">
+    <Entry Placeholder="E-post"
+            Text="{Binding Username}"/>
+    <Entry Placeholder="Passord"
+            Text="{Binding Password}"
+            IsPassword="true"/>
+    <Button Text="Opprett" TextColor="#007DFF"
+            BackgroundColor="White"/>
+  </StackLayout>
+</ContentPage>

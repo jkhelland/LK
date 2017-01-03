@@ -12,10 +12,21 @@ namespace AzureMobileTestAppLK
     {
         // Track whether the user has authenticated.
         bool authenticated = false;
+        
 
         public LoginPage()
         {
             InitializeComponent();
+        }
+
+        async void OnLoginClicked(object sender, EventArgs args)
+        {
+            await Navigation.PushAsync(new WelcomeScreen());
+        }
+
+        async void OnRegisterClicked(object sender, EventArgs args)
+        {
+            await Navigation.PushAsync(new NewUser());
         }
     }
 }
