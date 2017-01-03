@@ -17,5 +17,6 @@
     <Button Text="Register" TextColor="White"
             BackgroundColor="#0E26BF"
             Command="{Binding RegisterCommand}"/>
+    
   </StackLayout>
 </ContentPage>
