@@ -1,5 +1,4 @@
 ﻿using System;
-
 using Android.App;
 using Android.Content;
 using Android.Content.PM;
@@ -29,7 +28,7 @@ namespace AzureMobileTestAppLK.Droid
             try
             {
                 // Sign in with Facebook login using a server-managed flow.
-                user = await TodoItemManager.DefaultManager.CurrentClient.LoginAsync(this,
+                user = await ActivityManager.DefaultManager.CurrentClient.LoginAsync(this,
                     MobileServiceAuthenticationProvider.WindowsAzureActiveDirectory);
                 if (user != null)
                 {

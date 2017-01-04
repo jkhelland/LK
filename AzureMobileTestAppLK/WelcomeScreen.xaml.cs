@@ -8,11 +8,18 @@ using Xamarin.Forms;
 
 namespace AzureMobileTestAppLK
 {
-    public partial class WelcomeScreen : ContentPage
+    public partial class WelcomeScreen : TabbedPage
     {
+        bool authenticated = true;
+
         public WelcomeScreen()
         {
             InitializeComponent();
+        }
+
+        async void OnLogoffClicked(object sender, EventArgs args)
+        {
+
         }
     }
 }

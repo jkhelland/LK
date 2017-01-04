@@ -8,15 +8,18 @@
     <Image Source="icon.png" Aspect="AspectFit"
            WidthRequest = "75" HeightRequest = "75" />
     <Image Source="LKTxT.png" Aspect="AspectFit" />
+    <Label Text="Det er ikke nødvendig å fylle ut e-post og passord under, bare klikk på knappen for å logge inn. Du blir da vist videre til Azure sin loginside..." TextColor="Red" />
     <Entry Placeholder="E-post"
             Text="{Binding Username}"/>
     <Entry Placeholder="Passord"
             Text="{Binding Password}"
             IsPassword="true"/>
-    <Button Text="Logg på" TextColor="White"
+    <Button x:Name="LoginButton" 
+            Text="Logg på" TextColor="White"
             BackgroundColor="#E32021"
             Clicked="OnLoginClicked" />
-    <Button Text="Opprett ny bruker" TextColor="#007DFF"
+    <Button x:Name="RegisterButton"
+            Text="Opprett ny bruker" TextColor="#007DFF"
             BackgroundColor="White" 
             Clicked="OnRegisterClicked"/>
     <Label x:Name="valueLabel" Text="{Binding LoginText}" />
